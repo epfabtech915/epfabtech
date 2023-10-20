@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Add your styles and other headers here -->
+    <style>
+        /* Style for the tab buttons */
+        .tab-button {
+            background-color: #0000FF; /* Fixed button color */
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sketchfab-embed-wrapper2" id="modelContainer2">
+        <!-- Initial model iframe -->
+        <iframe id="modelFrame2" title="Custom CNC Option 1" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/0ef72ddff6e4452587b1c92cdfd307bd/embed?autostart=1&ui_hint=2"></iframe>
+    </div>
+
+    <!-- Tab buttons -->
+    <button class="tab-button active" onclick="showModel2(0)">Custom CNC Option 1</button>
+    <button class="tab-button" onclick="showModel2(1)">Custom CNC Option 2</button>
+
+    <script>
+        var currentModel1 = 0;
+        var modelUrls2 = [
+            "https://sketchfab.com/models/0ef72ddff6e4452587b1c92cdfd307bd/embed?autostart=1&ui_hint=2",
+            "https://sketchfab.com/models/8c647f33cb0f47de915eba8a554d0917/embed?autostart=1&ui_hint=2"
+        ];
+
+        function showModel2(modelIndex2) {
+            currentModel1 = modelIndex2;
+            var modelFrame2 = document.getElementById("modelFrame2");
+            modelFrame2.src = modelUrls2[currentModel1];
+
+            // Update tab button styles
+            var tabButtons = document.querySelectorAll(".tab-button");
+            tabButtons.forEach(function(button, index) {
+                if (index === modelIndex2) {
+                    button.classList.add("active");
+                } else {
+                    button.classList.remove("active");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add your styles and other headers here -->
+    <style>
+        /* Style for the tab buttons */
+        .tab-button {
+            background-color: #0000FF; /* Fixed button color */
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sketchfab-embed-wrapper" id="modelContainer">
+        <!-- Initial model iframe -->
+        <iframe id="modelFrame" title="ACM COLUMN COMPONENTS" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/470c473c19ea4aecb42f667e6afcc5a5/embed?ui_hint=2"></iframe>
+    </div>
+
+    <!-- Tab buttons -->
+    <button class="tab-button" onclick="showModel(0)">ACM COLUMN COMPONENTS</button>
+    <button class="tab-button" onclick="showModel(1)">ACM COLUMN</button>
+    <button class="tab-button" onclick="showModel(2)">ACM COLUMN ANIMATION</button>
+
+    <script>
+        var currentModel = 0;
+        var modelUrls = [
+            "https://sketchfab.com/models/470c473c19ea4aecb42f667e6afcc5a5/embed?ui_hint=2",
+            "https://sketchfab.com/models/24703c5c99f946169079f275463f87b5/embed?ui_hint=2",
+            "https://sketchfab.com/models/c7c88e5e002545fbb5f329a65a717839/embed?ui_hint=2"
+        ];
+
+        function showModel(modelIndex) {
+            currentModel = modelIndex;
+            var modelFrame = document.getElementById("modelFrame");
+            modelFrame.src = modelUrls[currentModel];
+        }
+    </script>
+</body>
+</html>
+
